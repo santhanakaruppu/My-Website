@@ -89,10 +89,10 @@ const ToDoList = () => {
           </Button>
         </form>
       </div>
-      {isAddList && <WelcomeToDo />}
+      {todolist.length<=0 && <WelcomeToDo />}
       <div className="row">
         <div className="col">
-          {!isAddList && <h3>In Progress</h3>}
+          {!isAddList &&todolist.length>0 && <h3>In Progress</h3>}
           <table className="table">
             <tbody>
               {todolist.map(
